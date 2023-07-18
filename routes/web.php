@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\PersonasController;
+/* use App\Http\Controllers\PersonasController; */
+use App\Http\Controllers\crudPersonasSepController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Container\BindingResolutionException; 
 /* 
  Route::get('/', WelcomeController::class); */
-Route::get('/inicio',[PersonasController::class,'index'])->name('personas.index');
-Route::get('/agregar',[PersonasController::class,'create'])->name('personas.create'); 
-Route::post('/store',[PersonasController::class,'store'])->name('personas.store'); 
-Route::get('/modificar/{id}',[PersonasController::class,'edit'])->name('personas.edit'); 
-Route::post('/update/{id}',[PersonasController::class,'update'])->name('personas.update'); 
-Route::get('/show/{id}',[PersonasController::class,'show'])->name('personas.show'); 
-Route::get('/destroy/{id}',[PersonasController::class,'destroy'])->name('personas.destroy'); 
+Route::get('/inicio',[crudPersonasSepController::class,'index'])->name('personas.index');
+Route::get('/agregar',[crudPersonasSepController::class,'create'])->name('personas.create'); 
+Route::post('/store',[crudPersonasSepController::class,'store'])->name('personas.store'); 
+Route::get('/modificar/{id}',[crudPersonasSepController::class,'edit'])->name('personas.edit'); 
+Route::post('/update/{id}',[crudPersonasSepController::class,'update'])->name('personas.update'); 
+Route::get('/show/{id}',[crudPersonasSepController::class,'show'])->name('personas.show'); 
+Route::get('/destroy/{id}',[crudPersonasSepController::class,'destroy'])->name('personas.destroy'); 
 
 
 Route::get('/', function () {
