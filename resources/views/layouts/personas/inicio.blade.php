@@ -1,5 +1,5 @@
 <x-app-layout>
-   {{--  <div class="container "> --}}
+ <div class="container "> 
         <br>
 
         <div class="w-full p-4 text-center bg-slate-50 border border-gray-200 rounded-lg shadow sm:p-8 ">
@@ -165,6 +165,6 @@
 
             });
         </script>
-   {{--  </div> --}}
+     </div>
 
 </x-app-layout>
