@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PersonasController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Contracts\Container\BindingResolutionException; 
 /* 
  Route::get('/', WelcomeController::class); */
 Route::get('/inicio',[PersonasController::class,'index'])->name('personas.index');
