@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComboUc;
 use App\Models\Personas;
+use App\Models\PersonasHis;
 use Illuminate\Http\Request;
 use Illuminate\Container\Container;
 
@@ -17,15 +19,16 @@ class PersonasController extends Controller
 
     public function create()
     {
-        return view('layouts.personas.altas');
+        $comboUc = ComboUc::all();
+        return view('layouts.personas.altas', compact('comboUc'));
         //el formulario datos
     }
 
     public function edit($id)
     {
-
+        $comboUc = ComboUc::all();
         $persona = Personas::find($id);
-        return view('layouts.personas.modifica', compact('persona'));
+        return view('layouts.personas.modifica', compact('persona'),compact('comboUc'));
     }
 
     public function show($id)
@@ -68,9 +71,29 @@ class PersonasController extends Controller
         $personas->unidad_ges = $request->post('unidad');
         $personas->fec_ini = $request->post('f_inicio');
         $personas->fec_alta = $request->post('f_alta');
-
+        $personas->usu_ing = $request->post('usuario');
         $personas->save();
+
+        $personash = new PersonasHis();
+        $personash->nombres = $request->post('nombres');
+        $personash->apellidos = $request->post('apellido');
+        $personash->doc = $request->post('documento');
+        $personash->email = $request->post('correo');
+        $personash->telefono  = $request->post('telefono');
+        $personash->provincia = $request->post('prov');
+        $personash->partido   = $request->post('partido');
+        $personash->localidad = $request->post('localidad');
+        $personash->direccion = $request->post('direccion');
+        $personash->cp = $request->post('codigo');
+        $personash->referente = $request->post('referente');
+        $personash->unidad_ges = $request->post('unidad');
+        $personash->fec_ini = $request->post('f_inicio');
+        $personash->fec_alta = $request->post('f_alta');
+        $personash->usu_ing= $request->post('usuario');
+        $personash->usu_mod = $request->post('usuario');
+        $personash->save();
         return redirect()->route("personas.index")->with("success", "Agregado con exito!");
+    
     }
 
     public function update(Request $request)

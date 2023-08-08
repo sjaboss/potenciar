@@ -127,7 +127,7 @@
                     <div class="grid md:grid-cols-2 md:gap-6">
                         <div class="relative z-0 w-full mb-6 group">
                             <select id="prov" name="prov"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5>
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                 <option value="{{ $persona->provincia }}">{{ $persona->provincia }}</option>
                                 <option value="Buenos Aires"> Buenos Aires</option>
                                 <option value="Catamarca"> Catamarca</option>
@@ -152,11 +152,6 @@
                                 <option value="Santiago del Estero"> Santiago del Estero</option>
                                 <option value="Tierra del Fuego"> Tierra del Fuego</option>
                                 <option value="Tucumán">Tucumán</option>
-
-
-                                {{--      <option>Canada</option>
-                                <option>France</option>
-                                <option>Germany</option> --}}
                             </select>
                         </div>
 
@@ -272,29 +267,17 @@
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 md:gap-6">
+        
                         <div class="relative z-0 w-full mb-6 group">
-                            <input value="{{ $persona->unidad_ges }}" type="text" name="unidad" id="unidad"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" " required />
-                            @error('unidad')
-                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                    role="alert">
-                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                    </svg>
-                                    <div>
-                                        <span class="font-medium">Atención!</span> {{ $message }}
-                                    </div>
-                                </div>
-                            @enderror
-                            <label for="unidad"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Unidad
-                                de gestion</label>
+                            <select name="unidad" id="unidad"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option value="{{ $persona->unidad_ges }}">{{ $persona->unidad_ges }}</option>
+                                @foreach ($comboUc as $item)
+                                    <option value="{{ $item->description }}">{{ $item->description }}</option>
+                                @endforeach
+                            </select>
                         </div>
-                    </div>
+
 
                     <div class="grid md:grid-cols-2 md:gap-6">
                         <div class="relative z-0 w-full mb-6 group">
@@ -356,6 +339,8 @@
                      focus:outline-none focus:ring-blue-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center 
                      mr-2 mb-2">Modificar
                             <span class="fas fa-user-edit"> </span></button>
+
+                            <input hidden id="usuario" name="usuario" type="text" value=" {{ Auth::user()->usuario }}" >
                     </div>
 
                 </form>

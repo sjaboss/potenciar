@@ -23,13 +23,13 @@ module.exports = {
                 'silver': '#ecebff',
                 'bubble-gum': '#ff77e9',
                 'bermuda': '#78dcca',
-                Gray: colors.Gray,
-                orange: colors.orange,
-                greenlime: colors.lime,
+                'Gray': colors.Gray,
+                'orange': colors.orange,
+                'greenlime': colors.lime,
               },
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+   /*          fontFamily: {
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+            }, */
         },
     },
 

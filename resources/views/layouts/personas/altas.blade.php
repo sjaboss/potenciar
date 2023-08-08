@@ -6,10 +6,12 @@
                 <h5 class="mb-2 text-3xl bg-gray-300 p-6  rounded-t-lg  shadow font-bold text-gray-900 ">
                     Potenciar trabajo</h5>
                 <h2 class="mb-4 text-xl font-bold text-gray-900 d">Alta de personas</h2>
+         
+            
+
                 <br>
                 <form class="" action=" {{ route('personas.store') }} " method="POST" novalidate>
                     @csrf
-
                     <div class="grid md:grid-cols-2 md:gap-6">
                         <div class="relative z-0 w-full mb-6 group">
                             <input autocomplete="off"type="text" name="nombres" id="nombres"
@@ -34,13 +36,12 @@
                         </div>
 
 
-                        
+
                         <div class="relative z-0 w-full mb-6 group">
                             <input autocomplete="off" type="text" name="apellido" id="apellido"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
                             appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                           placeholder=" " 
-                                value="{{ old('apellido') }}" />
+                                placeholder=" " value="{{ old('apellido') }}" />
                             @error('apellido')
                                 <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
                                     role="alert">
@@ -64,19 +65,19 @@
                             <input type="text" name="documento" id="documento"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder="" value="{{ old('documento') }}" />
-                                @error('documento')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                            @error('documento')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
+                                </div>
+                            @enderror
                             <label for="documento"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Documento</label>
                         </div>
@@ -88,19 +89,19 @@
                             <input type="email" name="correo" id="correo"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" " value="{{ old('correo') }}" />
-                                @error('correo')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                            @error('correo')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
+                                </div>
+                            @enderror
                             <label for="correo"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Correo</label>
                         </div>
@@ -109,20 +110,20 @@
                             <input type="text" name="telefono" id="telefono"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                 placeholder=" " value="{{ old('telefono') }}" />
-                                @error('telefono')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                            @error('telefono')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
-                                <label for="telefono"
+                                </div>
+                            @enderror
+                            <label for="telefono"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Telefono
                                 Móvil</label>
                         </div>
@@ -157,31 +158,28 @@
                                 <option value="Santiago del Estero"> Santiago del Estero</option>
                                 <option value="Tierra del Fuego"> Tierra del Fuego</option>
                                 <option value="Tucumán">Tucumán</option>
-
-
-                                {{--      <option>Canada</option>
-                                <option>France</option>
-                                <option>Germany</option> --}}
                             </select>
                         </div>
+
+                    
 
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="text" name="partido" id="partido"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "  value="{{ old('partido') }}" />
-                                @error('partido')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('partido') }}" />
+                            @error('partido')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
+                                </div>
+                            @enderror
                             <label for="partido"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 k:text-gray-4dar00 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Partido</label>
                         </div>
@@ -191,20 +189,20 @@
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="text" name="localidad" id="localidad"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "  value="{{ old('localidad') }}" />
-                                @error('localidad')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('localidad') }}" />
+                            @error('localidad')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
+                                </div>
+                            @enderror
                             <label for="localidad"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Localidad</label>
                         </div>
@@ -212,20 +210,20 @@
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="text" name="direccion" id="direccion"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "   value="{{ old('direccion') }}" />
-                                @error('direccion')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('direccion') }}" />
+                            @error('direccion')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror
+                                </div>
+                            @enderror
                             <label for="direccion"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Direccion
                                 y Nro.</label>
@@ -236,21 +234,21 @@
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="text" name="codigo" id="codigo"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "    value="{{ old('codigo') }}" />
-                                @error('codigo')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('codigo') }}" />
+                            @error('codigo')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror                    
-                                <label for="codigo"
+                                </div>
+                            @enderror
+                            <label for="codigo"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cod.
                                 postal</label>
                         </div>
@@ -258,55 +256,44 @@
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="text" name="referente" id="referente"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "   value="{{ old('referente') }}" />
-                                @error('referente')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('referente') }}" />
+                            @error('referente')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror    
+                                </div>
+                            @enderror
                             <label for="referente"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Referente</label>
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 md:gap-6">
                         <div class="relative z-0 w-full mb-6 group">
-                            <input type="text" name="unidad" id="unidad"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "  value="{{ old('unidad') }}" />
-                                @error('unidad')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
-                                    </div>
-                                @enderror   
-                            <label for="unidad"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Unidad
-                                de gestion</label>
+                            
+                            <select name="unidad" id="unidad"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option value="Buenos Aires"> Seleccione unidad de gestión</option>
+                                @foreach ($comboUc as $item)                    
+                                    <option value="{{ $item->description }}">{{ $item->description }}</option>
+                                @endforeach
+                            </select>
+
                         </div>
-                    </div>
+
 
                     <div class="grid md:grid-cols-2 md:gap-6">
                         <div class="relative z-0 w-full mb-6 group">
                             <div class="relative z-0 w-full mb-6 group">
                                 <input type="date" name="f_inicio" id="f_inicio"
                                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                    placeholder=" "      value="{{ old('f_inicio') }}" />
+                                    placeholder=" " value="{{ old('f_inicio') }}" />
                                 @error('f_inicio')
                                     <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
                                         role="alert">
@@ -319,8 +306,8 @@
                                             <span class="font-medium">Atención!</span> {{ $message }}
                                         </div>
                                     </div>
-                                @enderror   
-                                    <label for="f_inicio"
+                                @enderror
+                                <label for="f_inicio"
                                     class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha
                                     de inicio</label>
                             </div>
@@ -329,21 +316,21 @@
                         <div class="relative z-0 w-full mb-6 group">
                             <input type="date" name="f_alta" id="f_alta"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" "    value="{{ old('f_alta') }}" />
-                                @error('f_alta')
-                                    <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
-                                        role="alert">
-                                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                        </svg>
-                                        <div>
-                                            <span class="font-medium">Atención!</span> {{ $message }}
-                                        </div>
+                                placeholder=" " value="{{ old('f_alta') }}" />
+                            @error('f_alta')
+                                <div class="p-1 flex items-center  m-1 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50"
+                                    role="alert">
+                                    <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium">Atención!</span> {{ $message }}
                                     </div>
-                                @enderror   
-                                <label for="f_alta"
+                                </div>
+                            @enderror
+                            <label for="f_alta"
                                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha
                                 de alta</label>
                         </div>
@@ -356,9 +343,14 @@
                         <button
                             class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4
                      focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
-                     mr-2 mb-2">Alta
+                     mr-2 mb-2">Alta 
                             <span class="fas fa-user-plus"></span></button>
+                           
                     </div>
+
+                    <input hidden id="usuario" name="usuario" type="text" value=" {{ Auth::user()->usuario }}" >
+                 
+         
 
                 </form>
             </div>

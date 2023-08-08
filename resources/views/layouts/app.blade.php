@@ -43,18 +43,19 @@
         <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
 
-    <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+ {{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">  --}}
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css"
         integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- flexSlaider --}}
-    <link rel="stylesheet" href="{{ asset('vendor/FlexSlider/flexslider.css') }}">
+   
     {{-- vue --}}
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 
@@ -68,8 +69,7 @@
     {{-- sweetalert2 --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="glider.js"></script>
-    <link rel="stylesheet" type="text/css" href="glider.css">
+
 
 
         <!-- Scripts -->

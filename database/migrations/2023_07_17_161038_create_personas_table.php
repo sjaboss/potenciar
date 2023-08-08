@@ -12,6 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('personas', function (Blueprint $table) {
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_spanish2_ci';
             $table->id();
             $table->string('nombres');
             $table->string('apellidos');
@@ -19,14 +21,15 @@ return new class extends Migration
             $table->string('provincia');
             $table->string('partido');
             $table->string('localidad');
-            $table->string('cp');
-            $table->string('telefono');
-            $table->string('email');
-            $table->string('referente');
+            $table->string('cp')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('email')->nullable();
+            $table->string('referente')->nullable();
             $table->string('unidad_ges');
             $table->date('fec_ini');
             $table->date('fec_alta');
             $table->string('direccion');
+            $table->string('usu_ing');
             $table->timestamps();
         });
     }

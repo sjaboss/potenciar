@@ -3,13 +3,10 @@
         <br>
 
         <div class="w-full p-4 text-center bg-slate-50 border border-gray-200 rounded-lg shadow sm:p-8 ">
-            <h5 class="mb-2 text-3xl bg-gray-300 p-6  rounded-t-lg  shadow font-bold text-gray-900">Potenciar Trabajo
-            </h5>
-
-            <p class=" mb-3 text-base text-center border-b text-gray-500 sm:text-lg dark:text-gray-400">Listado de
+            <h5 class="mb-2 text-3xl bg-gray-300 p-6  rounded-t-lg  shadow font-bold text-gray-900">Listado de
                 personas en el
-                sistema</p>
-
+                sistema
+            </h5>
 
             <div class="mb-2 mt-3 text-center">
                 <a href="{{ route('personas.create') }}" type="button"
@@ -40,10 +37,12 @@
                 </div>
             </div>
 
+           
+
             <div class=" pb-4 relative overflow-x-auto shadow-md sm:rounded-lg">
                 <hr class="pb-1">
 
-                <table id="t_personas" class="w-full text-lg text-left text-gray-500 ">
+                <table id="t_personas" class="w-full text-lg text-left text-gray-500   ">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                         <tr>
                             <th scope="col" class="px-1 py-1 hidden">
@@ -135,9 +134,9 @@
                 </table>
 
             </div>
-            <div class="pt-4">
+        {{--     <div class="pt-4">
                 {{ $datos->links() }}
-            </div>
+            </div> --}}
         </div>
 
         <script type="text/javascript">
@@ -148,17 +147,19 @@
                     buttons: [
                         /*   'copyHtml5', */
                         'excelHtml5',
-                        /*         'csvHtml5', */
+                                'csvHtml5', 
                         'pdfHtml5'
                     ],
                     "order": [
                         [0, "desc"]
                     ],
                     //para apagar el pie
-                    "info": false,
-                    "paging": false,
+                    "info": true,
+                    "paging": true,
                     language: {
                         "sSearch": "Buscar:",
+                        "info": "_TOTAL_ Operaciones",
+                        "infoEmpty": "hojas 0 a 0 de 0 personas",
 
                     }
                 });
@@ -166,5 +167,8 @@
             });
         </script>
      </div>
+
+     
+
 
 </x-app-layout>
