@@ -26,6 +26,7 @@ module.exports = {
                 'Gray': colors.Gray,
                 'orange': colors.orange,
                 'greenlime': colors.lime,
+                'green': colors.green,
               },
    /*          fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
