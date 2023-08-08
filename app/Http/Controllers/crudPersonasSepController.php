@@ -32,7 +32,7 @@ public function __construct()
 
     public function edit($id)
     {
-        $comboUc = ComboUc::utf8_decode()->all();
+        $comboUc = ComboUc::all();
         $persona = Crudpersonas::find($id);
         return view('layouts.personas.modifica', compact('persona'),compact('comboUc'));
     }
