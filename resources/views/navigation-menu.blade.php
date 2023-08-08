@@ -17,7 +17,7 @@
                     </x-nav-link>
 
                     <x-nav-link href="{{ route('personas.historial') }}" :active="request()->routeIs('personas.historial')">
-                        Histarial personas
+                        Historial personas
                     </x-nav-link>
 
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -168,7 +168,7 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link href="{{ route('personas.historial') }}" :active="request()->routeIs('personas.historial')">
-                Histarial personas
+                Historial personas
             </x-responsive-nav-link>
 
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('personas.index')">
