@@ -14,7 +14,7 @@ module.exports = {
 
     theme: {
         extend: {
-            colors: {
+       /*      colors: {
                 transparent: 'transparent',
                 current: 'currentColor',
                 'white': '#ffffff',
@@ -29,7 +29,7 @@ module.exports = {
                 'orange': colors.orange,
                 'greenlime': colors.lime,
                 'green': colors.green,
-              },
+              }, */
    /*          fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             }, */
